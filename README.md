@@ -1,38 +1,20 @@
-# create-svelte
+# simple-store-svelte
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+A super simple, writable store for the Svelte frontend framework.
+It allows quick and easy readable access to the current state, without having to subscribe and unsubscribe to retrieve the value.
 
-## Creating a project
+## How to use
 
-If you're seeing this, you've probably already done this step. Congrats!
+```javascript
+import { writable } from '@deanrumsby/simple-store-svelte';
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+const store = writable(5);
 
-# create a new project in my-app
-npm create svelte@latest my-app
+const value = store.get(); // this uses a simpler implementation than svelte/store
+
+console.log(value); // 5
 ```
 
-## Developing
+The methods `set`, `update` and `subscribe` all work the same as the svelte/store package.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+As this package implements the store contract correctly, you can use the syntactic sugar `$store` within your components as usual.
