@@ -3,6 +3,15 @@
 	"version": "1.0.2",
 	"homepage": "https://github.com/deanrumsby/simple-store-svelte#readme",
 	"license": "MIT",
+	"bugs": {
+		"url" : "https://github.com/deanrumsby/simple-store-svelte/issues",
+		"email" : "dean@deanrumsby.com"
+	},
+	"author": {
+		"name" : "Dean Rumsby",
+		"email" : "dean@deanrumsby.com",
+		"url" : "https://www.deanrumsby.com"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "svelte-kit sync && svelte-package",
