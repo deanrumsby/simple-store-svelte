@@ -5,6 +5,8 @@ It allows quick and easy readable access to the current state, without having to
 
 ## How to use
 
+`npm install @deanrumsby/simple-store-svelte`
+
 ```javascript
 import { writable } from '@deanrumsby/simple-store-svelte';
 
